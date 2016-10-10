@@ -4,6 +4,13 @@ public class TransformFormDto {
 	private String value;
 	private int code;
 	
+	public TransformFormDto() { }
+	
+	public TransformFormDto(int code,String value) {
+		this.value = value;
+		this.code = code;
+	}
+	
 	public String getValue() {
 		return value;
 	}

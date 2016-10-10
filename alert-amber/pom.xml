@@ -138,6 +138,11 @@
                         <failOnMissingWebXml>false</failOnMissingWebXml>
                     </configuration>
                 </plugin>
+                <plugin>
+		        	<groupId>com.google.appengine</groupId>
+			        <artifactId>appengine-maven-plugin</artifactId>
+			        <version>1.9.42</version>
+				</plugin>
             </plugins>
         </pluginManagement>
     <finalName>alert-amber</finalName>

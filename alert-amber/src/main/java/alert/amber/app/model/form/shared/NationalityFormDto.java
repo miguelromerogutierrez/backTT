@@ -2,7 +2,13 @@ package alert.amber.app.model.form.shared;
 
 public class NationalityFormDto {
 	private String nationality;
-	private String code;
+	private int code;
+	
+	public NationalityFormDto() {}
+	public NationalityFormDto(int code, String nationality) {
+		this.code = code;
+		this.nationality = nationality;
+	}
 	
 	public String getNationality() {
 		return nationality;
@@ -10,10 +16,10 @@ public class NationalityFormDto {
 	public void setNationality(String nationality) {
 		this.nationality = nationality;
 	}
-	public String getCode() {
+	public int getCode() {
 		return code;
 	}
-	public void setCode(String code) {
+	public void setCode(int code) {
 		this.code = code;
 	}
 }

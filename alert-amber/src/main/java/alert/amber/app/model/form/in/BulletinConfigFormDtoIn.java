@@ -6,14 +6,19 @@ import alert.amber.app.model.form.shared.NationalityFormDto;
 import alert.amber.app.model.form.shared.TransformFormDto;
 
 public class BulletinConfigFormDtoIn {
+	private String bulletinCode;
 	private long ageRangeMin;
 	private long ageRangeMax;
 	private List<NationalityFormDto> nationalities;
-	private List<TransformFormDto> weights;
-	private List<TransformFormDto> heights;
 	private long factsDateRangeMin;
 	private long factsDateRangeMax;
 	
+	public String getBulletinCode() {
+		return bulletinCode;
+	}
+	public void setBulletinCode(String bulletinCode) {
+		this.bulletinCode = bulletinCode;
+	}
 	public long getAgeRangeMin() {
 		return ageRangeMin;
 	}
@@ -31,18 +36,6 @@ public class BulletinConfigFormDtoIn {
 	}
 	public void setNationalities(List<NationalityFormDto> nationalities) {
 		this.nationalities = nationalities;
-	}
-	public List<TransformFormDto> getWeights() {
-		return weights;
-	}
-	public void setWeights(List<TransformFormDto> weights) {
-		this.weights = weights;
-	}
-	public List<TransformFormDto> getHeights() {
-		return heights;
-	}
-	public void setHeights(List<TransformFormDto> heights) {
-		this.heights = heights;
 	}
 	public long getFactsDateRangeMin() {
 		return factsDateRangeMin;

@@ -9,6 +9,7 @@ import alert.amber.app.model.form.shared.TransformFormDto;
 
 public class BulletinDto {
 	
+	private String bulletinCode;
 	private String name;
 	private String lastName;
 	private String secondLastName;
@@ -25,6 +26,13 @@ public class BulletinDto {
 	private long factsDate;
 	private PlaceFormDto place;
 	
+	
+	public String getBulletinCode() {
+		return bulletinCode;
+	}
+	public void setBulletinCode(String bulletinCode) {
+		this.bulletinCode = bulletinCode;
+	}
 	public String getName() {
 		return name;
 	}

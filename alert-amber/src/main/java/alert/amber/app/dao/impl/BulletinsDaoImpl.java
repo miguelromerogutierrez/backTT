@@ -2,6 +2,7 @@ package alert.amber.app.dao.impl;
 
 import java.util.List;
 
+import org.hibernate.Criteria;
 import org.springframework.stereotype.Repository;
 
 import alert.amber.app.dao.AbstractDao;
@@ -14,9 +15,8 @@ import alert.amber.app.model.entities.BulletinEntity;
 public class BulletinsDaoImpl extends AbstractDao<Integer, BulletinEntity> implements BulletinsDao {
 
 	@Override
-	public BulletinEntity findBulletinById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+	public BulletinEntity findBulletinById(String id) {
+		return (BulletinEntity)getSession().get(BulletinEntity.class, id);
 	}
 
 	@Override
@@ -26,14 +26,22 @@ public class BulletinsDaoImpl extends AbstractDao<Integer, BulletinEntity> imple
 
 	@Override
 	public void deleteBulletin(BulletinDto bulletinDto) {
-		// TODO Auto-generated method stub
-		
+		//Query query = getSession().createSQLQuery("delete from Employee where ssn = :ssn");
+        //query.setString("ssn", ssn);
+        //query.executeUpdate();
 	}
 
 	@Override
-	public List<BulletinDto> findAllBulletins() {
-		// TODO Auto-generated method stub
-		return null;
+	@SuppressWarnings("unchecked")
+	public List<BulletinEntity> findAllBulletins() {
+		Criteria criteria = createEntityCriteria();
+	    return (List<BulletinEntity>) criteria.list();
 	}
+	
+	/*public Employee findEmployeeBySsn(String ssn) {
+        Criteria criteria = createEntityCriteria();
+        criteria.add(Restrictions.eq("ssn", ssn));
+        return (Employee) criteria.uniqueResult();
+    }*/
 
 }

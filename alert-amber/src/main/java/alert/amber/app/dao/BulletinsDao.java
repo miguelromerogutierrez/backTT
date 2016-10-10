@@ -6,8 +6,8 @@ import alert.amber.app.model.dto.BulletinDto;
 import alert.amber.app.model.entities.BulletinEntity;
 
 public interface BulletinsDao {
-	BulletinEntity findBulletinById(int id);
+	BulletinEntity findBulletinById(String id);
 	void saveBulletin(BulletinDto bulletinDto);
 	void deleteBulletin(BulletinDto bulletinDto);
-	List<BulletinDto> findAllBulletins();
+	List<BulletinEntity> findAllBulletins();
 }
